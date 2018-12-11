@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Weex-ios-WeChat'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'A short description of Weex-ios-WeChat.'
 
 # This description is used to generate tags and improve search results.
@@ -25,14 +25,16 @@ TODO: Add long description of the pod here.
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'clotee' => 'clotee@foxmail.com' }
-  s.source           = { :git => 'https://github.com/clotee/Weex-ios-WeChat.git', :tag => s.version }
+  s.source           = { :git => 'https://github.com/clotee/Weex-ios-WeChat.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-  s.platform = :ios, '8.0'
+  s.platform = :ios, '7.0'
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'Weex-ios-WeChat/Classes/*.{h,m}'
-  s.dependency 'WechatOpenSDK', '1.8.3'
+  
   s.dependency 'WeexSDK', '0.18'
+  s.dependency 'WeexPluginLoader'
+  s.dependency 'WechatOpenSDK', '1.8.3'
   
   # s.resource_bundles = {
   #   'Weex-ios-WeChat' => ['Weex-ios-WeChat/Assets/*.png']

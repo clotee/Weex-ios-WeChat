@@ -20,7 +20,7 @@ WX_EXPORT_METHOD(@selector(pay::))
 WX_EXPORT_METHOD(@selector(auth::))
 
 - (void)init:(NSString *)appId :(WXModuleCallback)callback{
-    [[NatWechat singletonManger] init:appId :^(id error, id result) {
+    [[WeexWechat singletonManger] init:appId :^(id error, id result) {
         if (error) {
             if (callback) {
                 callback(error);
@@ -34,7 +34,7 @@ WX_EXPORT_METHOD(@selector(auth::))
 }
 
 - (void)checkInstalled:(WXModuleCallback)callback{
-    [[NatWechat singletonManger] checkInstalled:^(id error, id result) {
+    [[WeexWechat singletonManger] checkInstalled:^(id error, id result) {
         if (error) {
             if (callback) {
                 callback(error);
@@ -48,7 +48,7 @@ WX_EXPORT_METHOD(@selector(auth::))
 }
 
 - (void)share:(NSDictionary *)params :(WXModuleCallback)callback{
-    [[NatWechat singletonManger] share:params :^(id error, id result) {
+    [[WeexWechat singletonManger] share:params :^(id error, id result) {
         if (error) {
             if (callback) {
                 callback(error);
@@ -62,7 +62,7 @@ WX_EXPORT_METHOD(@selector(auth::))
 }
 
 - (void)pay:(NSDictionary *)params :(WXModuleCallback)callback{
-    [[NatWechat singletonManger] pay:params :^(id error, id result) {
+    [[WeexWechat singletonManger] pay:params :^(id error, id result) {
         if (error) {
             if (callback) {
                 callback(error);
@@ -76,7 +76,7 @@ WX_EXPORT_METHOD(@selector(auth::))
 }
 
 - (void)auth:(NSDictionary *)params :(WXModuleCallback)callback{
-    [[NatWechat singletonManger] auth:params :^(id error, id result) {
+    [[WeexWechat singletonManger] auth:params :^(id error, id result) {
         if (error) {
             if (callback) {
                 callback(error);
