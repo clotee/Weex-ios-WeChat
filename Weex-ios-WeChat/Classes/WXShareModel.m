@@ -1,0 +1,93 @@
+//
+//  ShareModel.m
+//  Expecta
+//
+//  Created by star diao on 10/12/2018.
+//
+
+#import "WXShareModel.h"
+#import <WeexPluginLoader/WeexPluginLoader.h>
+#import "Wechat.h"
+
+@implementation WXShareModel
+@synthesize weexInstance;
+
+WX_PlUGIN_EXPORT_MODULE(wechat, WXShareModel)
+WX_EXPORT_METHOD(@selector(init::))
+WX_EXPORT_METHOD(@selector(checkInstalled:))
+WX_EXPORT_METHOD(@selector(share::))
+WX_EXPORT_METHOD(@selector(pay::))
+WX_EXPORT_METHOD(@selector(auth::))
+
+- (void)init:(NSString *)appId :(WXModuleCallback)callback{
+    [[NatWechat singletonManger] init:appId :^(id error, id result) {
+        if (error) {
+            if (callback) {
+                callback(error);
+            }
+        } else {
+            if (callback) {
+                callback(result);
+            }
+        }
+    }];
+}
+
+- (void)checkInstalled:(WXModuleCallback)callback{
+    [[NatWechat singletonManger] checkInstalled:^(id error, id result) {
+        if (error) {
+            if (callback) {
+                callback(error);
+            }
+        } else {
+            if (callback) {
+                callback(result);
+            }
+        }
+    }];
+}
+
+- (void)share:(NSDictionary *)params :(WXModuleCallback)callback{
+    [[NatWechat singletonManger] share:params :^(id error, id result) {
+        if (error) {
+            if (callback) {
+                callback(error);
+            }
+        } else {
+            if (callback) {
+                callback(result);
+            }
+        }
+    }];
+}
+
+- (void)pay:(NSDictionary *)params :(WXModuleCallback)callback{
+    [[NatWechat singletonManger] pay:params :^(id error, id result) {
+        if (error) {
+            if (callback) {
+                callback(error);
+            }
+        } else {
+            if (callback) {
+                callback(result);
+            }
+        }
+    }];
+}
+
+- (void)auth:(NSDictionary *)params :(WXModuleCallback)callback{
+    [[NatWechat singletonManger] auth:params :^(id error, id result) {
+        if (error) {
+            if (callback) {
+                callback(error);
+            }
+        } else {
+            if (callback) {
+                callback(result);
+            }
+        }
+    }];
+}
+
+@end
+
