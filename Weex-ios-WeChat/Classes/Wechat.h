@@ -4,35 +4,35 @@
 //
 //  Created by star diao on 11/12/2018.
 //
-
-#ifndef Wechat_h
-#define Wechat_h
-
-
-#endif /* Wechat_h */
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-#import <WXApi.h>
-#import <WXApiObject.h>
-
-#define WXResTypeShare      @"Wechat:Share"
-#define WXResTypePay        @"Wechat:Pay"
-#define WXResTypeAuth       @"Wechat:Auth"
-#define WXResTypeAddCard    @"Wechat:AddCard"
-
-@interface WeexWechat : NSObject <WXApiDelegate>
-
-@property (nonatomic, strong) NSString *appId;
-
-typedef void (^WeChatCallback)(id error, id result);
-
-+ (WeexWechat *)singletonManger;
-
-+ (void)initWXAPI:(NSString *)appId;
-- (void)init:(NSString *)appId :(WeChatCallback)callback;
-- (void)checkInstalled:(WeChatCallback)callback;
-- (void)share:(NSDictionary *)options :(WeChatCallback)callback;
-- (void)pay:(NSDictionary *)options :(WeChatCallback)callback;
-- (void)auth:(NSDictionary *)options :(WeChatCallback)callback;
-
-@end
+//
+//#ifndef Wechat_h
+//#define Wechat_h
+//
+//
+//#endif /* Wechat_h */
+//#import <Foundation/Foundation.h>
+//#import <UIKit/UIKit.h>
+//#import <WXApi.h>
+//#import <WXApiObject.h>
+//
+//#define WXResTypeShare      @"Wechat:Share"
+//#define WXResTypePay        @"Wechat:Pay"
+//#define WXResTypeAuth       @"Wechat:Auth"
+//#define WXResTypeAddCard    @"Wechat:AddCard"
+//
+//@interface WeexWechat : NSObject <WXApiDelegate>
+//
+//@property (nonatomic, strong) NSString *appId;
+//
+//typedef void (^WeChatCallback)(id error, id result);
+//
+//+ (WeexWechat *)singletonManger;
+//
+//+ (void)initWXAPI:(NSString *)appId;
+//- (void)init:(NSString *)appId :(WeChatCallback)callback;
+//- (void)checkInstalled:(WeChatCallback)callback;
+//- (void)share:(NSDictionary *)options :(WeChatCallback)callback;
+//- (void)pay:(NSDictionary *)options :(WeChatCallback)callback;
+//- (void)auth:(NSDictionary *)options :(WeChatCallback)callback;
+//
+//@end
