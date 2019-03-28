@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Weex-ios-WeChat'
-  s.version          = '0.1.3'
+  s.version          = '0.1.4'
   s.summary          = 'A short description of Weex-ios-WeChat.'
 
 # This description is used to generate tags and improve search results.
@@ -31,11 +31,11 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'Weex-ios-WeChat/Classes/*.{h,m}'
-  
-  s.dependency 'WeexSDK', '0.18.0'
+
+  s.dependency 'WeexSDK'
   s.dependency 'WeexPluginLoader'
   s.dependency 'WechatOpenSDK', '1.8.3'
-  
+
   # s.resource_bundles = {
   #   'Weex-ios-WeChat' => ['Weex-ios-WeChat/Assets/*.png']
   # }
